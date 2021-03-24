@@ -29,7 +29,6 @@ class Exchange:
         )
         self._ccxt_exchange.aiohttp_proxy = 'http://127.0.0.1:7890'
         self._ccxt_exchange.aiohttp_trust_env = True
-        # self._ccxt_exchange.verify = False
 
         # Public market data
     async def fetch_last_price(self, pair: str) -> float:
