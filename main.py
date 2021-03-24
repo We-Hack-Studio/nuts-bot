@@ -115,7 +115,7 @@ class Bot:
                 await self._rest_client.update_robot_asset_record(
                     self._robot_id, data=data
                 )
-                print('self._strategy.position', self._strategy.position)
+                # print('self._strategy.position', self._strategy.position)
                 if self._strategy.position["side"] != 0:
                     data = [
                         {
@@ -213,7 +213,7 @@ class Bot:
     def run(self):
         logger.info("Starting robot...")
         loop = asyncio.get_event_loop()
-        loop.set_debug(enabled=True)
+        loop.set_debug(enabled=False)
         # note: asyncio.run doesn't work? why?
         loop.run_until_complete(self.start())
         loop.stop()
@@ -226,7 +226,7 @@ if __name__ == "__main__":
     # load settings
     args = parser.parse_args()
     config_file = pathlib.Path(args.config_file)
-    print('config_file', config_file)
+    # print('config_file', config_file)
     if not config_file.exists():
         raise ConfigException(
             "Config file does not exist. Searching path is: {}".format(config_file)

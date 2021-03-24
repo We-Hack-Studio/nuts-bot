@@ -116,9 +116,9 @@ class Strategy:
         max_leverage = self._parameters["maxLeverage"]
         open_pos_percent = self._parameters["openPosPercent"]
         leveraged_balance = self._balance * max_leverage
-        print('max_leverage', max_leverage)
-        print('open_pos_percent', open_pos_percent)
-        print('leveraged_balance', leveraged_balance)
+        # print('max_leverage', max_leverage)
+        # print('open_pos_percent', open_pos_percent)
+        # print('leveraged_balance', leveraged_balance)
 
         # inverse contract
         if market_type in {"inverse_perpetual", "inverse_delivery"}:
@@ -145,12 +145,12 @@ class Strategy:
                 "open_pos_qty": round(open_pos_qty, precision),
                 "max_pos_qty": max_pos_qty,
             }
-            print('precision', precision)
-            print('open_pos_qty', open_pos_qty)
-            print('max_pos_qty', max_pos_qty)
-            print('leveraged_balance', leveraged_balance)
-            print('maxOpenPosCount', self._parameters["maxOpenPosCount"])
-            print('last_price', last_price)
+            # print('precision', precision)
+            # print('open_pos_qty', open_pos_qty)
+            # print('max_pos_qty', max_pos_qty)
+            # print('leveraged_balance', leveraged_balance)
+            # print('maxOpenPosCount', self._parameters["maxOpenPosCount"])
+            # print('last_price', last_price)
 
     async def ensure_order(self):
         orders = await self._exchange.fetch_current_orders(self.pair)
