@@ -1,0 +1,6 @@
+{
+  "robotId": 3,
+  "restApiBaseUrl": "http://127.0.0.1:8000/api/v1",
+  "wsApiUri": "ws://127.0.0.1:8000/ws/v1/streams/",
+  "apiKey": "T6dGrZaM.NedOd0JZcOJ7o7GJmm4rvtEuyyUHe9p4"
+}
